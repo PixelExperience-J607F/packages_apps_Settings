@@ -43,7 +43,7 @@ public class AutoTimeZonePreferenceController extends AbstractPreferenceControll
 
     @Override
     public boolean isAvailable() {
-        return !(Utils.isWifiOnly(mContext) || mIsFromSUW);
+        return true;
     }
 
     @Override
