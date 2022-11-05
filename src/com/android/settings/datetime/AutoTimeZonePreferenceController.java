@@ -53,25 +53,7 @@ public class AutoTimeZonePreferenceController extends AbstractPreferenceControll
 
     @Override
     public boolean isAvailable() {
-        if (mIsFromSUW) {
-            return false;
-        }
-
-        TimeZoneCapabilities timeZoneCapabilities =
-                getTimeZoneCapabilitiesAndConfig().getCapabilities();
-        int capability = timeZoneCapabilities.getConfigureAutoDetectionEnabledCapability();
-
-        // The preference only has two states: present and not present. The preference is never
-        // present but disabled.
-        if (capability == CAPABILITY_NOT_SUPPORTED
-                || capability == CAPABILITY_NOT_ALLOWED
-                || capability == CAPABILITY_NOT_APPLICABLE) {
-            return false;
-        } else if (capability == CAPABILITY_POSSESSED) {
-            return true;
-        } else {
-            throw new IllegalStateException("Unknown capability=" + capability);
-        }
+        return true;
     }
 
     @Override
