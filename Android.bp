@@ -54,10 +54,6 @@ android_library {
     ],
 
     srcs: ["src/**/*.java", "src/**/*.kt"],
-    resource_dirs: [
-        "res",
-        "TouchGestures/res"
-    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -94,7 +90,6 @@ android_library {
         "Settings-change-ids",
         "SystemUIUnfoldLib",
         "custom-preference",
-        "vendor.lineage.fastcharge-V1.0-java",
         "faceunlock_framework",
     ],
 
